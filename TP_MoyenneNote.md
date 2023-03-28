@@ -46,4 +46,7 @@ val moyenneGeneral = la formule pour avoir la moyenne generale
 ```
 
 ### Dernière partie (version tableau)
-- version tableau
+- version tableau/liste
+- Quelques mot-clés:
+
+listOf, List<Float>, arrayOf, Array<Float>
