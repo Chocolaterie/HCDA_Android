@@ -96,24 +96,5 @@ class MainActivity : AppCompatActivity() {
         // La version sans tableau
         // correctionWithoutTableau();
         // correctionWithTableau();
-        var personA = Person("Isaac")
-        var personB = Person("Lucas")
-
-        // personA += personB
-
-        personA++; // personA.inc()
-
-        var str1 = "Isaac"
-        var str2 = "Lucas"
-
-        var str3 = str1 + str2
-
-        if (personA == personB){
-
-        }
-
-
-        personA += personB; // personA.plusAssign(personB)
-        personA -= personB;
     }
 }
