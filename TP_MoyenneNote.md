@@ -1,14 +1,19 @@
+# Énoncé 
+
 ## Pouvoir faire la moyennes de x notes (à votre guise)
 
-### Partie 1
+Créer une première fonction qui permet de calculer la moyenne des notes saisies. Affichage attendu : 
+
 - La formule pour calculer une moyenne
 - Les notes sont saisies en dur (assignées en dur)
 
-exemple:
+Entrez le nombre de valeurs :  
+
 ```kt
 var notes1 = 15;
 var notes2 = 20;
-etc...
+...
+La moyenne est 14,5 
 ```
 
 ### Partie 2
