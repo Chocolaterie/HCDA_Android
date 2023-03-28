@@ -16,6 +16,22 @@ var notes2 = 20;
 La moyenne est 14,5 
 ```
 
+Dans votre code :
+
+```kt
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+
+    // Mettre notes en dur
+
+    // Calculer la moyenne (des notes en dur)
+    // ...
+
+    // Affiche la moyenne avec println
+}
+```
+
 ### Partie 2
 - Calculer la moyenne générale (additioner la moyenne de toute les matières)
 - Sans tableau (exemple: math, français, histoire, sport, à votre guise)
