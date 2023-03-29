@@ -3,9 +3,13 @@ package com.example.enidemo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.EditText
+import android.widget.TextView
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
+
 
     fun calculAverage(note1 : Float, note2 : Float, note3 : Float) : Float {
        return (note1 + note2 + note3) / 3.0f;
@@ -48,12 +52,6 @@ class MainActivity : AppCompatActivity() {
         for (note in notes){
             sum += note;
         }
-        //
-        val noteList = listOf(10.0f,10F)
-        for (i in (0..notes.size)){
-            noteList.get(i)
-
-        }
         // Diviser la somme des notes par le nombre de notes
         return sum / notes.size;
     }
@@ -86,7 +84,12 @@ class MainActivity : AppCompatActivity() {
         val averageGeneralVersion2 = calculAverage(averageMath, averageFrancais, averageSport);
 
         // Affiche la moyenne generale avec println
-        println(String.format("EniDemoTp : Moyenne Generale %f", averageGeneral))
+
+        // Récupérer le composant TextView
+        var tvMoyenne = findViewById<TextView>(R.id.tv_moyenne)
+
+        // Changer le texte du TextView récupéré
+        tvMoyenne.text = String.format("Moyenne Generale %f", averageGeneral)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,6 +98,15 @@ class MainActivity : AppCompatActivity() {
 
         // La version sans tableau
         // correctionWithoutTableau();
-        // correctionWithTableau();
+        correctionWithTableau();
+    }
+
+    // Lors du clique d'un bouton
+    fun OnClickButton(view: View) {
+        // Je récupère le champ de saisie
+        var edtEmail = findViewById<EditText>(R.id.edt_email)
+
+        // Récupérer et afficher la valeur textuelle d'un edit text
+        println(edtEmail.text)
     }
 }
