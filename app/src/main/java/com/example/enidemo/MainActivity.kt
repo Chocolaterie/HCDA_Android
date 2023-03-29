@@ -16,6 +16,10 @@ class MainActivity : AppCompatActivity() {
 
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        activityMainBinding.tvTest.text = "Coucou ! Tu veux voir ma Bière ?"
+
+        // lier la personne Isaac dans la vue
+        activityMainBinding.myPerson = Person("Isaac")
     }
 
 }
