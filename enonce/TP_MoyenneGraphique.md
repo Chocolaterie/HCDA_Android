@@ -2,6 +2,11 @@
 
 Afficher la moyenne génèrale dans un **TextView**
 
+Procédez de la manière suivante:
+- Ajouter le **TextView** dans la vue
+- Faut récupérer le **TextView**
+- Changer le texte de ce dernier lorsqu'on afficher la moyenne générale
+
 # Partie 2
 
 - Ajouter un champ pour saisir les notes (**EditText**) 
