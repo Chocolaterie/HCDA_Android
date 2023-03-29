@@ -29,6 +29,6 @@ On travail avec une seule matière (on a uniquement une liste de note)
 
 - *Information* : La fonction **average()** d'une liste existe déjà sur **kotlin**
 
-# Partie 3
+# Partie 3 (Avancée)
 
 Réussir à gérer les matières avec l'interface graphique
