@@ -22,7 +22,7 @@ On travail avec une seule matière (on a uniquement une liste de note)
 - On a une liste/tableau de note déclarée en tant que membre/variable de la classe **MainActivity**
 - Lorsqu'on clique sur le bouton "**Ajouter la note**", on ajoute la note saisie (**EditText**) dans notre liste/tableau de note
     - Ajouter la note dans le tableau
-    - Effacer/Vider le texte dans le **EditText** (texte vide)
+    - Effacer/Vider le texte dans le **EditText** (texte vide). Utiliser la fonction **monEditText.setText("")** ou **monEditText.text.clear()** pour vider
 ---
 - Lorsqu'on clique sur le bouton **Terminer**, on affiche la moyenne de ces notes (la liste/tableau de note)
     - **NOTE**: Le **TextView** est déjà sur la page mais vide par défaut (la propriété **text** est vide/="")
