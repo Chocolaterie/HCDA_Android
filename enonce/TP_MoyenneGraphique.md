@@ -9,7 +9,7 @@ Procédez de la manière suivante:
 
 # Partie 2
 
-On travail avec une seule matière
+On travail avec une seule matière (on a uniquement une liste de note)
 
 - Ajouter un champ pour saisir les notes (**EditText**) 
 
