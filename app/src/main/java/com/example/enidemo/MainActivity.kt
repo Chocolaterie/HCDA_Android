@@ -5,21 +5,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.enidemo.databinding.ActivityMainBinding
+import java.util.*
+import kotlin.concurrent.schedule
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var activityMainBinding: ActivityMainBinding //Le nom du XML en PascalCase avec suffix Binding:
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
-        activityMainBinding.tvTest.text = "Coucou ! Tu veux voir ma Bière ?"
+        Timer().schedule(1000){
+            //do something
+            onClick();
+        }
 
-        // lier la personne Isaac dans la vue
-        activityMainBinding.myPerson = Person("Isaac")
+    }
+
+    fun onClick() {
+        // get nav controller
+        val navController = findNavController(R.id.navExample).navigate(R.id.action_blankFragment_to_twoFragment)
     }
 
 }
