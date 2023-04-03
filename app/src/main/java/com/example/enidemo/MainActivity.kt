@@ -1,17 +1,11 @@
 package com.example.enidemo
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.enidemo.databinding.ActivityMainBinding
-import com.example.enidemo.fragment.BlankFragment
 import com.example.enidemo.fragment.BlankFragmentDirections
-import java.util.*
-import kotlin.concurrent.schedule
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,12 +13,6 @@ class MainActivity : AppCompatActivity() {
 
         DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
-        /*
-        Timer().schedule(1000){
-            //do something
-            onClick();
-        }
-    */
         onClick();
     }
 
