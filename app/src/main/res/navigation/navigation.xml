@@ -19,6 +19,15 @@
         android:id="@+id/twoFragment"
         android:name="com.example.enidemo.fragment.TwoFragment"
         android:label="fragment_two"
-        tools:layout="@layout/fragment_two" />
+        tools:layout="@layout/fragment_two" >
+        <argument
+            android:name="code"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="nom"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
 
 </navigation>
