@@ -25,13 +25,13 @@
             android:textSize="40sp"
             android:text="@{String.valueOf(counterViewModel.counter)}"
             />
-
-
         <!--  Bouton incrementer le compteur -->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Incrementer" />
+            android:text="Incrementer"
+            android:onClick="@{counterViewModel.onClickAddCounter}"
+            />
 
     </LinearLayout>
 </layout>
