@@ -1,5 +1,6 @@
 package com.example.enidemo.api
 
+import com.example.enidemo.api.ChuckService.Companion.retrofit
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
@@ -13,7 +14,6 @@ interface ChuckService {
 
         // L'url de l'API
         val BASE_URL = "https://api.chucknorris.io/jokes/"
-
         // L'utilitaire permettant de mapper automatiquement le JSON en objet
         val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
@@ -26,4 +26,8 @@ interface ChuckService {
 
     @GET("random")
     suspend fun randomFact() : Joke
+}
+
+object ChuckApi {
+    val retrofitService : ChuckService by lazy { retrofit.create(ChuckService::class.java) }
 }
