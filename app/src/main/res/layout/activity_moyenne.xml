@@ -1,51 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MoyenneActivity">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="moyenneViewModel"
+            type="com.example.enidemo.moyenne.MoyenneViewModel" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        tools:context=".moyenne.MoyenneActivity">
 
-        <EditText
-            android:id="@+id/edt_note"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Saisissez une note"
-            android:inputType="numberDecimal"
-            />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        <Button
-            android:id="@+id/btn_addNote"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ajouter une note"
-            android:onClick="OnAddNote"
-            />
+            <EditText
+                android:id="@+id/edt_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Saisissez une note"
+                android:inputType="numberDecimal" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Terminer"
-            android:onClick="onClickEnd"
-            />
+            <Button
+                android:id="@+id/btn_addNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{moyenneViewModel.OnAddNote}"
+                android:text="Ajouter une note" />
 
-        <TextView
-            android:id="@+id/tv_averageNote"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:padding="10dp"
-            android:text=""
-            />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{moyenneViewModel.onClickEnd}"
+                android:text="Terminer" />
+
+            <!-- Afficher la moyenne-->
+            <TextView
+                android:id="@+id/tv_averageNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{String.valueOf(moyenneViewModel.average)}"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
+</layout>

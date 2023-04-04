@@ -26,7 +26,16 @@ class CounterActivity : AppCompatActivity() {
         activityCounterBinding.counterViewModel = counterViewModel
 
         // Ecouter le changement du compteur
+        /*
         counterViewModel.counter.observe(this, Observer {
+            // Que faire lorsque je detecte un changement dans le compteur
+            // Mettre à jour le view model dans la vue
+            activityCounterBinding.counterViewModel = counterViewModel
+        })
+        */
+
+        // Ecouter le changement de la liste
+        counterViewModel.dataList.observe(this, Observer {
             // Que faire lorsque je detecte un changement dans le compteur
             // Mettre à jour le view model dans la vue
             activityCounterBinding.counterViewModel = counterViewModel
