@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         // Methode 2
         var action = BlankFragmentDirections.actionBlankFragmentToTwoFragment();
-        action.nom = "test"
+        action.nom = "Isaac"
         action.code = 20
         findNavController(R.id.navExample).navigate(action)
 

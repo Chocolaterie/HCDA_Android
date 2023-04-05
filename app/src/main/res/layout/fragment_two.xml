@@ -7,8 +7,9 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tv_nom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Le mec du Warehouse" />
+        android:text="" />
 
 </FrameLayout>

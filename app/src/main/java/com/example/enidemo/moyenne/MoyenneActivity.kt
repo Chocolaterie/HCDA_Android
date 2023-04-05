@@ -6,12 +6,14 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import com.example.enidemo.R
 import com.example.enidemo.databinding.ActivityMoyenneBinding
 
 class MoyenneActivity : AppCompatActivity() {
 
-    lateinit var moyenneViewModel : MoyenneViewModel;
+   lateinit var moyenneViewModel : MoyenneViewModel;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,6 +25,11 @@ class MoyenneActivity : AppCompatActivity() {
 
         // Mettre à jour le view model dans la vue
         activityMoyenneBinding.moyenneViewModel = moyenneViewModel;
+
+        // J'ecoute les changements sur la moyenne
+        moyenneViewModel.averageNote.observe(this, Observer {
+            activityMoyenneBinding.moyenneViewModel = moyenneViewModel;
+        });
 
     }
 

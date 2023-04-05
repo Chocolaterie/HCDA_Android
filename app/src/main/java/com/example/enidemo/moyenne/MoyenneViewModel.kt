@@ -4,6 +4,7 @@ import android.app.Activity
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.enidemo.R
 
@@ -11,7 +12,8 @@ class MoyenneViewModel : ViewModel() {
 
     // Liste de note
     var notes = arrayListOf<Float>()
-    var average = 0.0f;
+    var averageNote = MutableLiveData<Float>(0.0f);
+    // lateinit var averageNote : MutableLiveData<Float>
 
     // Lorsque j'ajoute une note
     fun OnAddNote(view: View) {
@@ -38,15 +40,9 @@ class MoyenneViewModel : ViewModel() {
     // Quand je clique sur le bouton terminer
     fun onClickEnd(view: View) {
         // je calcul la moyenne
-        val averageNote = notes.average()
+        averageNote.value = notes.average().toFloat()
 
-        // je recupère le TextView
-        var tvAverageNote = view.findViewById<TextView>(R.id.tv_averageNote)
-
-        // modifier le text du TextView pour afficher la moyenne
-        tvAverageNote.text = String.format("La moyenne est : %f", averageNote);
-
-        // reset
+        // reset (optionnel)
         notes.clear()
     }
 }
