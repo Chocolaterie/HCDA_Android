@@ -14,7 +14,7 @@
         android:theme="@style/Theme.EniDemo"
         tools:targetApi="31">
         <activity
-            android:name=".tplieu.TpLieuActivity"
+            android:name=".room.RoomActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,9 +23,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".recyclerview.RecyclerViewActivity"
+            android:name=".tplieu.TpLieuActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".counter.CounterActivity"
             android:exported="true" />
@@ -37,7 +40,7 @@
             android:exported="true" />
         <activity
             android:name=".moyenne.MoyenneActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
