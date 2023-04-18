@@ -10,8 +10,8 @@ Créer une première fonction qui permet de calculer la moyenne des notes saisie
 Entrez le nombre de valeurs :  
 
 ```kt
-var notes1 = 15;
-var notes2 = 20;
+var notes1 = 15.0f;
+var notes2 = 20.0f;
 ...
 La moyenne est 14,5 
 ```
@@ -37,9 +37,9 @@ override fun onCreate(savedInstanceState: Bundle?) {
 - Sans tableau (exemple: math, français, histoire, sport, à votre guise)
 
 ```kt
-println(String.format("La moyenne en math est : %d", mathMoyenne))
+println(String.format("La moyenne en math est : %f", mathMoyenne))
 
-println(String.format("La moyenne en français est : %d", francaisMoyenne))
+println(String.format("La moyenne en français est : %f", francaisMoyenne))
 
 ...
 val moyenneGeneral = la formule pour avoir la moyenne generale
